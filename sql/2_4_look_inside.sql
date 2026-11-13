@@ -1,0 +1,2 @@
+select snapshot_id, sequence_number, strftime(timestamp_ms, '%Y-%m-%d %H:%M') as committed, regexp_extract(manifest_list, '[^/]+$') as manifest_list from iceberg_snapshots('/Users/Shared/academy/learner/projects/ethereum_iceberg/warehouse/raw/blocks/metadata/00001-46b9764e-50f9-4fac-8c43-e8b8649ae74d.metadata.json');
+select status, regexp_extract(file_path, '[^/]+$') as data_file, file_format, record_count from iceberg_metadata('/Users/Shared/academy/learner/projects/ethereum_iceberg/warehouse/raw/blocks/metadata/00001-46b9764e-50f9-4fac-8c43-e8b8649ae74d.metadata.json');
