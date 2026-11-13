@@ -1,0 +1,1 @@
+select strftime(date, '%Y-%m') as month, count(*) as blocks, sum(transaction_count) as transactions, round(avg(base_fee_per_gas) / 1e9, 2) as avg_base_fee_gwei from iceberg_scan('/Users/Shared/academy/learner/projects/ethereum_iceberg/warehouse/raw/blocks/metadata/00004-d2460d15-6fbb-40d0-9fc0-b8daa2aadb57.metadata.json') group by 1 order by 1;
