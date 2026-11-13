@@ -1,0 +1,8 @@
+ethereum_iceberg:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /Users/Shared/academy/learner/projects/ethereum_iceberg_dev.duckdb
+      schema: main
+      threads: 4
